@@ -194,7 +194,7 @@ if [ ! -d "${BRP_UPAT_DIR}" ]; then
   pr_dbg "Unpacked PAT %s not found - preparing" "${BRP_UPAT_DIR}"
 
   brp_mkdir "${BRP_UPAT_DIR}"
-cp ~tc/ds3622xsp_42621.pat ~tc/redpill-loader/cache/
+cp ~tc/ds3622xsp_42621.pat ~tc/redpill-load/cache/
   if [ ! -f "${BRP_PAT_FILE}" ]; then
     readonly BRP_PAT_URL=$(brp_json_get_field "${BRP_REL_CONFIG_JSON}" "os.pat_url")
     pr_info "PAT file %s not found - downloading from %s" "${BRP_PAT_FILE}" "${BRP_PAT_URL}"
